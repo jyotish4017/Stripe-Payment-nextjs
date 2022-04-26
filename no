@@ -1,0 +1,15 @@
+[1mdiff --git a/pages/api/checkout_sessions/index.js b/pages/api/checkout_sessions/index.js[m
+[1mindex f803552..6eef3aa 100644[m
+[1m--- a/pages/api/checkout_sessions/index.js[m
+[1m+++ b/pages/api/checkout_sessions/index.js[m
+[36m@@ -9,8 +9,8 @@[m [mexport default async function handler(req, res) {[m
+         mode: 'payment',[m
+         payment_method_types: ['card'],[m
+         line_items: req?.body?.items ?? [],[m
+[31m-        success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,[m
+[31m-        cancel_url: `${req.headers.origin}/cart`,[m
+[32m+[m[32m        success_url: `${req.headers.origin}/result?session_id={CHECKOUT_SESSION_ID}`,[m
+[32m+[m[32m        cancel_url: `${req.headers.origin}/result?session_id={CHECKOUT_SESSION_ID}`,[m
+       });[m
+ [m
+       res.status(200).json(session);[m
