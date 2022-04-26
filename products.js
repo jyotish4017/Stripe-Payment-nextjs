@@ -1,6 +1,6 @@
 const products = [
   {
-    id: 'price_1JAE9cEy9j6mAC9ettoD2R0D',
+    id: 'price_1KsXZ4SCj1EgePjBZ8yQtY9H',
     name: 'Kentiapalm (L)',
     price: 3995,
     currency: 'USD',
